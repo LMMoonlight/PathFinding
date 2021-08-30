@@ -3,32 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Path
-{
-    class Node
-    {
-        public bool isExplored = false;
-        public Node isExploredFrom;
-        public int X { set; get; }
-        public int Y { set; get; }
-        public Node(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-
-    }
-    struct Vector
-    {
-        public int X { set; get; }
-        public int Y { set; get; }
-        public Vector(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-    }
+{    
     class SearchPath
     {
+        //se intento y se falló
         //private Node[] nodes = new Node[25];
         //private Vector[] positions = new Vector[25];
 
@@ -208,6 +186,7 @@ namespace Path
         {
             _path.Add(node);
         }
+        
         public void GetPath()
         {
             Console.WriteLine("The designed path is: ");
@@ -217,6 +196,29 @@ namespace Path
             }
         }
     }
-
-
+    
+    
+    class Node
+    {
+        public bool isExplored = false;
+        public Node isExploredFrom;
+        public int X { set; get; }
+        public int Y { set; get; }
+        public Node(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+    }
+    
+    struct Vector
+    {
+        public int X { set; get; }
+        public int Y { set; get; }
+        public Vector(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+    }
 }
